@@ -55,4 +55,9 @@ class PetClinicIntegrationTests {
 		assertThat(result.getStatusCode()).isEqualTo(HttpStatus.BAD_GATEWAY);
 	}
 
+	@Test
+	void testPetsNames() {
+
+	}
+
 }
