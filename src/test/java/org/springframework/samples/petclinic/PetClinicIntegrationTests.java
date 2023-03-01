@@ -53,6 +53,7 @@ class PetClinicIntegrationTests {
 		RestTemplate template = builder.rootUri("http://localhost:" + port).build();
 		ResponseEntity<String> result = template.exchange(RequestEntity.get("/owners/32").build(), String.class);
 		assertThat(result.getStatusCode()).isEqualTo(HttpStatus.BAD_REQUEST);
+
 	}
 
 }
