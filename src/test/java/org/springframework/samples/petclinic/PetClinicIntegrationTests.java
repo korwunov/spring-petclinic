@@ -57,7 +57,8 @@ class PetClinicIntegrationTests {
 
 	@Test
 	void testPetsNames() {
-
+		RestTemplate template = builder.rootUri("http://localhost:" + port).build();
+		ResponseEntity<String> result = template.exchange(RequestEntity.get("/pets/").build(), String.class);
 	}
 
 }
